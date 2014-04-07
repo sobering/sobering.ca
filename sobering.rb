@@ -1,7 +1,7 @@
 module Sobering
   class Site < Sinatra::Base
     get '/' do
-      'Hello world!'
+      slim :index
     end
   end
 end
