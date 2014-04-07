@@ -2,7 +2,7 @@ require 'logger'
 
 $stdout.sync = true
 
-require File.expand_path('config/environment.rb')
-require File.expand_path('sobering.rb')
+require File.expand_path('config/environment')
+require File.expand_path('sobering')
 
 run Sobering::Site
