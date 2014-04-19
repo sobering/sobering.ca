@@ -1,0 +1,91 @@
+{
+  "name": "Stefan Sobering",
+  "address": {
+    "street": "13 Deerfield Trail",
+    "city": "Steinbach",
+    "province": "MB",
+    "country": "Canada",
+    "postalCode": "R5G 1L3"
+  },
+  "contact": {
+    "email": "ss@sobering.ca",
+    "phone": "(204) 326-5667"
+  },
+  "summary": "Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.",
+  "skills": {
+    "languages": [
+      "Ruby",
+      "JavaScript",
+      "CoffeeScript",
+      "HTML",
+      "Slim",
+      "CSS",
+      "Sass"
+    ],
+    "frameworks": [
+      "Sinatra",
+      "Rails",
+      "Knockout.js",
+      "jQuery",
+      "Zepto.js"
+    ],
+    "versionControl": [
+      "Git"
+    ],
+    "other": [
+      "Agile development methodologies",
+      "Graphic design"
+    ]
+  },
+  "experience": [
+    {
+      "company": {
+        "name": "Golden West Broadcasting",
+        "website": "http://goldenwestradio.com"
+      },
+      "position": "Front-end Engineer",
+      "period": {
+        "start": "2009-11-01",
+        "end": null
+      },
+      "responsibilities": [
+        "Configured asset pipeline in Rails 4 application",
+        "Front-end stuff..."
+      ],
+      "summary": "You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out."
+    },
+    {
+      "company": {
+        "name": "Awesome Co.",
+        "website": "http://awesomecompany.ca"
+      },
+      "position": "Front-end Engineer",
+      "period": {
+        "start": "2010-11-01",
+        "end": "2011-09-01"
+      },
+      "responsibilities": [
+        "Coded shit"
+      ],
+      "summary": "Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man."
+    }
+  ],
+  "education": [
+    {
+      "name": "University of Manitoba",
+      "major": "Computer Science",
+      "period": {
+        "start": "2012-11-01",
+        "end": null
+      } 
+    },
+    {
+      "name": "Steinbach Regional Secondary School",
+      "major": "Academic",
+      "period": {
+        "start": "2006-09-01",
+        "end": "2009-06-01"
+      } 
+    }
+  ]
+}

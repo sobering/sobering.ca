@@ -1,9 +1,15 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.0'
 
+gem 'activesupport'
 gem 'sinatra'
 
+group :production do
+  gem 'unicorn'
+end
+
 group :assets do
+  gem 'bootstrap-sass'
   gem 'bourbon'
   gem 'coffee-script'
   gem 'neat'

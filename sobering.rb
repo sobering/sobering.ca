@@ -6,7 +6,14 @@ module Sobering
     register Sinatra::AssetPipeline
 
     get '/' do
-      slim :index
+      redirect '/resume'
+    end
+
+    get '/resume' do
+      data   = File.read('public/resume.json')
+      resume = JSON.parse(data)
+
+      slim :resume, locals: { resume: resume }
     end
   end
 end

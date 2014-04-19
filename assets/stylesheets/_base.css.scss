@@ -1,0 +1,36 @@
+@import "bourbon";
+@import "neat";
+
+$dark-blue: shade(rgb(38,37,55), 10%);
+$purple: rgb(65,42,156);
+$red-eh: rgb(226,5,5);
+$turtle: rgb(247,255,253);
+$light-blue: rgb(160,192,231);
+$holy-blue: rgb(27,102,255);
+$bright-blue: rgb(0,206,245);
+
+// media query breakpoints
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+
+body {
+  letter-spacing: 2px;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+// bootstrap variable overrides
+$body-bg: $purple;
+$text-color: tint($light-blue, 30%);
+$link-color: $bright-blue;
+$link-hover-color: white;
+$font-size-base: 21px;
+$font-family-sans-serif: 'Roboto', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$headings-font-family: 'Glegoo', $font-family-sans-serif;
+$headings-font-weight: 400;
+$headings-color: $holy-blue;
+
+@import "bootstrap-custom";

@@ -1,0 +1,84 @@
+@import "base";
+
+body {
+  padding-top: 7%;
+}
+
+#conway {
+  background: shade($purple, 7%);
+  position: absolute;
+  top: 0; left: 0;
+  overflow: hidden;
+  z-index: -500;
+}
+
+.navbar {
+  background: shade($purple, 15%);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+
+  .row {
+    @include outer-container;
+    @include pad;
+
+    object { margin-bottom: -5px; }
+  }
+}
+
+header, .summary {
+  @include outer-container;
+  @include pad;
+}
+
+.summary {
+  p {
+    @include span-columns(12);
+  }
+}
+
+.row {
+  padding-top: 1%;
+  padding-bottom: 2.5%;
+
+  &.light {
+    background: white;
+    color: shade($text-color, 55%);
+  }
+}
+
+section section h1 {
+  color: tint($purple, 15%);
+  font-size: $font-size-h3;
+}
+
+.skills, .education, .experience {
+  @include outer-container;
+  @include pad;
+}
+
+@include media($small) {
+  .skills {
+    section {
+      @include span-columns(5);
+      @include omega(3n);
+    }
+  }
+
+  .education {
+    li {
+      @include span-columns(6);
+    }
+  }
+}
+
+@include media($medium) {
+  .summary {
+    p {
+      @include span-columns(7);
+    }
+  }
+}
+
+@include media($large) {
+}

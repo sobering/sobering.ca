@@ -1,0 +1,48 @@
+.row.conway-container
+  header
+    h1 #{resume["name"]}
+    ul.list-inline
+      li #{resume["address"]["city"]} #{resume["address"]["province"]}, #{resume["address"]["country"]}
+      li #{resume["contact"]["email"]}
+
+  section.summary
+    p #{resume["summary"]}
+
+.row.light
+  section.skills
+    h1 Skills
+    - for skillset in resume["skills"]
+      section
+        h1 #{skillset.first.titleize}
+        ul
+          - for skill in skillset.last
+            li #{skill}
+
+.row
+  section.experience
+    h1 Experience
+    ul
+      - for experience in resume["experience"]
+        li
+          section
+            h1
+              span
+                a target="_blank" href="#{experience["company"]["website"]}" #{experience["company"]["name"]}
+              span  #{experience["period"]["start"]} &ndash; #{experience["period"]["end"]}
+            span #{experience["position"]}
+            ul
+              - for responsibility in experience["responsibilities"]
+                li #{responsibility}
+            p #{experience["summary"]}
+
+.row.light
+  section.education
+    h1 Education
+    ul
+      - for school in resume["education"]
+        li
+          section
+            h1
+              span #{school["name"]} 
+              span #{school["period"]["start"]} &ndash; #{school["period"]["end"]}
+            span #{school["major"]}
