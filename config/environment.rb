@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require 'json'
 require 'sinatra/base'
 require 'sinatra/asset_pipeline'
 require 'active_support/inflector'

@@ -1,12 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
+ruby '2.1.1'
 
 gem 'activesupport'
 gem 'sinatra'
-
-group :production do
-  gem 'unicorn'
-end
 
 group :assets do
   gem 'bootstrap-sass'
@@ -20,6 +16,9 @@ group :assets do
 end
 
 group :development do
+  gem 'capistrano', '~> 3.2'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-chruby', '~> 0.1.1'
   gem 'shotgun'
 end
 
@@ -28,4 +27,8 @@ group :development, :test do
   gem 'fuubar'
   gem 'guard-rspec'
   gem 'rspec-given'
+end
+
+group :production do
+  gem 'unicorn'
 end
