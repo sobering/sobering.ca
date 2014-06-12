@@ -1,11 +1,11 @@
 lock '3.2.1'
 
-set :application, 'sobering'
+set :application, 'sobering.ca'
 set :repo_url, 'git@github.com:sobering/sobering.ca.git'
 
-set :chruby_ruby, '2.1.1'
+set :chruby_ruby, '2.1.2'
 
-set :deploy_to, "/srv/apps/#{fetch(:application)}"
+set :deploy_to, "/srv/www/#{fetch(:application)}"
 set :unicorn_conf, "#{current_path}/config/unicorn.rb"
 set :unicorn_pid, "#{current_path}/tmp/pids/unicorn.pid"
 
