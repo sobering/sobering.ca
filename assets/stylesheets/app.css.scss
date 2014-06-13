@@ -52,7 +52,7 @@ section section h1 {
   font-size: $font-size-h3;
 }
 
-.skills, .education, .experience {
+.skills, .education, .experience, .projects {
   @include outer-container;
   @include pad;
 }
@@ -66,6 +66,12 @@ section section h1 {
   }
 
   .education {
+    li {
+      @include span-columns(6);
+    }
+  }
+
+  .projects {
     li {
       @include span-columns(6);
     }

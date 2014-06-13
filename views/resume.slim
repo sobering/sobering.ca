@@ -43,3 +43,16 @@
               span #{school["name"]} 
               span #{school["period"]["start"]} &ndash; #{school["period"]["end"]}
             span #{school["major"]}
+
+.row
+  section.projects
+    h1 Projects
+    ul
+      - for project in resume["projects"]
+        li
+          section
+            h1
+              span
+                a target="_blank" href="#{project["website"]}" #{project["name"]}
+            p #{project["summary"]}
+
