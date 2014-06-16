@@ -1,58 +1,69 @@
-.row.conway-container
-  header
-    h1 #{resume["name"]}
-    ul.list-inline
-      li #{resume["address"]["city"]} #{resume["address"]["province"]}, #{resume["address"]["country"]}
-      li #{resume["contact"]["email"]}
+.conway-container
+  #conway
+  .container
+    .row
+      header.col-xs-12
+        h1 #{resume["name"]}
+        ul.list-inline
+          li #{resume["address"]["city"]} #{resume["address"]["province"]}, #{resume["address"]["country"]}
+          li #{resume["contact"]["email"]}
 
-.row.light
-  section.skills
-    h1 Skills
-    - for skillset in resume["skills"]
-      section
-        h1 #{skillset.first.titleize}
-        ul
-          - for skill in skillset.last
-            li #{skill}
+.light
+  .container
+    section.row.skills
+      h1.col-xs-12 Skills
+      - for skillset in resume["skills"]
+        section.col-sm-4
+          h1 #{skillset.first.titleize}
+          ul
+            - for skill in skillset.last
+              li #{skill}
 
-.row
-  section.experience
-    h1 Experience
+.container
+  section.row.experience
+    h1.col-xs-12 Experience
     ul
       - for experience in resume["experience"]
-        li
+        li.col-md-6
           section
             h1
               span
                 a target="_blank" href="#{experience["company"]["website"]}" #{experience["company"]["name"]}
               span  #{experience["period"]["start"]} &ndash; #{experience["period"]["end"]}
-            span #{experience["position"]}
-            ul
+            span.position #{experience["position"]}
+            ul.responsibilites
               - for responsibility in experience["responsibilities"]
                 li #{responsibility}
             p #{experience["summary"]}
 
-.row.light
-  section.education
-    h1 Education
-    ul
-      - for school in resume["education"]
-        li
-          section
-            h1
-              span #{school["name"]} 
-              span #{school["period"]["start"]} &ndash; #{school["period"]["end"]}
-            span #{school["major"]}
+.light
+  .container
+    section.row.education
+      h1.col-xs-12 Education
+      ul
+        - for school in resume["education"]
+          li.col-md-6
+            section
+              h1
+                span #{school["name"]} 
+                span #{school["period"]["start"]} &ndash; #{school["period"]["end"]}
+              span #{school["major"]}
 
-.row
-  section.projects
-    h1 Projects
+.container
+  section.row.projects
+    h1.col-xs-12 Projects
     ul
       - for project in resume["projects"]
-        li
+        li.col-md-8
           section
             h1
-              span
-                a target="_blank" href="#{project["website"]}" #{project["name"]}
+              a target="_blank" href="#{project["website"]}" #{project["name"]}
             p #{project["summary"]}
+
+.light
+  .container
+    footer.row
+      .col-xs-12.canada
+        h2 Made in Canada
+        object type="image/svg+xml" data="#{image_path 'canada.svg'}"
 

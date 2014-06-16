@@ -8,7 +8,6 @@ group :assets do
   gem 'bootstrap-sass'
   gem 'bourbon'
   gem 'coffee-script'
-  gem 'neat'
   gem 'sass'
   gem 'sinatra-asset-pipeline'
   gem 'slim'

@@ -1,90 +1,64 @@
 @import "base";
 
-body {
-  padding-top: 7%;
-}
-
 #conway {
   background: shade($purple, 7%);
+  padding-top: 40px;
   position: absolute;
   top: 0; left: 0;
   overflow: hidden;
   z-index: -500;
 }
 
-.navbar {
-  background: shade($purple, 15%);
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
+.logo {
+  position: relative;
+  top: 11px;
+  left: 25px;
+}
 
-  .row {
-    @include outer-container;
-    @include pad;
+.container > .row {
+  padding-top: 1.4em;
+  padding-bottom: 2.4em;
+}
 
-    object { margin-bottom: -5px; }
+.row > ul {
+  margin: 0; padding: 0;
+}
+
+.light {
+  background: white;
+  color: shade($text-color, 55%);
+}
+
+li.col-md-6, li.col-md-8 {
+  list-style-type: none;
+}
+
+h1 {
+  span { display: block; }
+
+  span:last-child {
+    color: tint($purple, 30%);
+    padding-top: 0.5em;
+    font-size: $font-size-base;
   }
 }
 
-header, .summary {
-  @include outer-container;
-  @include pad;
-}
+.canada {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 
-.summary {
-  p {
-    @include span-columns(12);
+  h2 {
+    color: $gray;
+    font-size: $font-size-base;
   }
 }
 
-.row {
-  padding-top: 1%;
-  padding-bottom: 2.5%;
-
-  &.light {
-    background: white;
-    color: shade($text-color, 55%);
-  }
+.responsibilites {
+  margin-bottom: 1em;
 }
 
 section section h1 {
   color: tint($purple, 15%);
   font-size: $font-size-h3;
-}
-
-.skills, .education, .experience, .projects {
-  @include outer-container;
-  @include pad;
-}
-
-@include media($small) {
-  .skills {
-    section {
-      @include span-columns(5);
-      @include omega(3n);
-    }
-  }
-
-  .education {
-    li {
-      @include span-columns(6);
-    }
-  }
-
-  .projects {
-    li {
-      @include span-columns(6);
-    }
-  }
-}
-
-@include media($medium) {
-  .summary {
-    p {
-      @include span-columns(7);
-    }
-  }
-}
-
-@include media($large) {
 }
