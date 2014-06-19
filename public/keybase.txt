@@ -1,0 +1,78 @@
+==================================================================
+https://keybase.io/sobering
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sobering.ca
+  * I am sobering (https://keybase.io/sobering) on keybase.
+  * I have a public key with fingerprint D827 AD61 2193 DA43 10A3  D244 3401 ACF6 663B BC32
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "d827ad612193da4310a3d2443401acf6663bbc32",
+            "host": "keybase.io",
+            "key_id": "3401acf6663bbc32",
+            "uid": "e1ff03462a8d1cb447a45cb387b71b00",
+            "username": "sobering"
+        },
+        "revoke": {
+            "sig_ids": [
+                "9ab1b9196f39d70d321a0e7eba14987d0a7589fddb61bb712e53512311f4cb6c0f"
+            ]
+        },
+        "service": {
+            "hostname": "sobering.ca",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1403189846,
+    "expire_in": 157680000,
+    "prev": "159fa5d9ca8250d223d54aebac6674391836b267958c9b678791f4fd07b8b1e7",
+    "seqno": 22,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.22
+Comment: https://keybase.io/crypto
+
+yMNBAnicbVJ7UFTVH1/ctVl3KEkIJoWwGw6PCO65r8fOYokrpRLarDGlyM4997Fc
+wb3L3t3NlTYSFVCKTSHHsgkVtflBOWMFBGoOQoqPQTHIrJ/MVGYQEdGopAR5L1P/
+NJ1/zpzP93M+j5lv94NGgyXigwWpP9Ytq5wfcaEzz29wHLyXX4ZARQgi1jKkWJy5
+JNntEr0er+z2IVZEYDCaEyiAARYXOAIHKIcLGEHgBAo4XqIoCoeQxzEkHSlSVP2H
+JgM5VcyQFQ3THk5Z0ND/4PtnBiKQJBQnKIxjBMBDgqA5guQhztCQBhBFdaIqet3c
+RlFjqwoUtWQuJJSOeMWAUqyBZYgquzQXFbGuQ1gOAsgClpJwVqBRAccAh4q0CDlA
+sAwtoBxNMqwkCJACUHPARBInAYYDIBE8pHhUQtZr2ppjQOZnxPVa/3LP4Dktlser
++BReKdEGRT6fR7XqoXxBj858RYTOvzWcUHYLeuR0JCB6VVlxI1agMXmfrIsCAsUB
+wzIElY6ImzyyV3TKOoOkKQbVju4jBjRJQLISRwoszzEYiQoYhgskwWnFeIqiCZwF
+DE5BjKJZkuFZSNEMzWqdJAGlIQOBSGv+qljqVhArhmk5OZdeSHa5OZ/fKyKh050F
+JkOExfDA7Fn6Whgsc6L+WZane+f+af5fgcc4lk4WuPo9dz/d7PV/n/VedGbI1tqQ
+klLx5I2rUbLZft4Zf+ePtzbUvJozcvGz/BWF+x/5qL1m1y9zTaN7UoZvttUmGTev
+tA2s/Larj4gKV+9+50ohYr/n2Go6l/2uOdsylta47NapxMWWv6I7ts8afjZo2pT/
+eQ1r39LPLs8bDEzYwll5lridYbA63LKvojapLsucfai5ak5xs+Owqmz/eOrsxIXk
+nANfLtn39oqjxd0Dixt3NNrWnDyfOVDacW7k+Mh01eUIf09TdGTqvPHyhQmDT1im
+3nCRzUvO1MTatvbOjlo0ObboWGH/pfza1Z844jLNa6pWdVxNzI2pn/f1M7YpInnp
+RtiekPVhU8Oe2NeNwZvk2qQOQ5qwPxQmc7e1tUflpMb+Vk2PLxC32MnrkWvJ00Wu
+1yzy8u/sxqGHX37hRkxkw0Mh37X46uduHYgMVwWxzhe76GuODTHdk4+rl+Mm2iNa
+DpXcPtVDE89n505U2HMLTk6XJWTcGeqrN4WX9h27ctsp372USdXvHv6B/eZIR1Nv
+2ipbCTVy9rjfDL/YlTA65FYs9UplpSP24lfr2pC6lh67Kf790slxz8+tzY8lHh68
+7q5uhqWezNajXODR8tGQY/pN07becq7hTE5M40snqo8EF+b8/6c4uYCdSjzRlbzz
+Kb4tZu+vB6f27lj/e9/8+1hapFM=
+=7pWn
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sobering
+
+==================================================================
+
