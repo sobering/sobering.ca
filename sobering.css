@@ -20,7 +20,7 @@ body {
 
 .header {
   text-transform: uppercase;
-  padding: 20% 0;
+  padding: 40px 0 60px 0;
 }
 
 .header__logo {
@@ -35,6 +35,7 @@ body {
 }
 
 .header__title {
+  color: inherit;
   font-weight: 700;
   font-size: 1.22rem;
   font-family: inherit;
@@ -56,6 +57,73 @@ body {
   padding-left: 65px;
 }
 
-.shoutout__title {
-  color: #1683fb;
+/* work-experience widget */
+.work-experience__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-experience__list:hover > .work-experience__item {
+  opacity: 0.3;
+}
+
+.work-experience__item {
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid rgba(7, 6, 16, 0.3);
+  margin: none;
+  padding: 15px;
+  transition: all 0.2s;
+}
+
+.work-experience__item:last-child {
+  border-bottom: 2px solid transparent;
+}
+
+.work-experience__item:hover {
+  background: rgba(34, 32, 53, 1);
+  border: 2px solid #0f47ff;
+  border-radius: 4px;
+  box-shadow: 0 0 2rem rgba(15, 71, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.work-experience__list:hover > .work-experience__item:hover {
+  opacity: 1;
+}
+
+.work-experience__item-title {
+  color: #F9D423;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.section {
+  background: rgba(34, 32, 53, 0.4);
+  border-radius: 3px;
+  box-shadow: 0 0 2rem rgba(7, 6, 16, 0.4);
+  margin-bottom: 60px;
+  position: relative;
+  max-width: 600px;
+}
+
+.section-title {
+  color: #0f47ff;
+  font-weight: 400;
+  font-size: 0.63rem;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.2rem;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+
+/* Type */
+h1, h2 {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Poppins', sans-serif;
 }
