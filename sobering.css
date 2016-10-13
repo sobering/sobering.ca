@@ -1,5 +1,6 @@
 html,
 body {
+  margin: 0;
   height: 100%;
 }
 
@@ -7,8 +8,8 @@ body {
   background: #070610;
   background: linear-gradient(100deg, #222035 0%,#121827 50%,#070610 100%);
   color: #e3e6e8;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,14 +19,12 @@ body {
 }
 
 .header {
-  font-family: 'Karla', sans-serif;
-  font-weight: 400;
   text-transform: uppercase;
-  margin: 20% 0;
+  padding: 20% 0;
 }
 
 .header__logo {
-  width: 65px;
+  width: 55px;
   position: absolute;
 }
 
@@ -37,8 +36,10 @@ body {
 
 .header__title {
   font-weight: 700;
-  font-size: 1.62rem;
-  margin: 0 0 -4px 0;
+  font-size: 1.22rem;
+  font-family: inherit;
+  padding-top: 2px;
+  margin: 0 0 -3px 0;
   letter-spacing: 0.1rem;
 }
 
@@ -52,5 +53,9 @@ body {
 
 .header__title,
 .header__subtitle {
-  padding-left: 75px;
+  padding-left: 65px;
+}
+
+.shoutout__title {
+  color: #1683fb;
 }
