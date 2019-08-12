@@ -63,3 +63,28 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# Default .gitignore from Stencil starter (excluding entries that existed already in .gitignore from Firebase)
+dist/
+!www/favicon.ico
+www/
+
+*~
+*.sw[mnpcod]
+*.lock
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+
+.stencil/
+.idea/
+.vscode/
+.sass-cache/
+.versions/
+$RECYCLE.BIN/
+
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
