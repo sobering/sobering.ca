@@ -79,6 +79,34 @@
     shuffled: false,
   };
 
+  function updateShuffleUi() {
+    shuffleBtn.classList.toggle('active', state.shuffled);
+    shuffleBtn.querySelector('span').textContent = state.shuffled ? 'restack' : 'shuffle';
+  }
+
+  /** Sync ?shuffle=1 in the URL when shuffle mode changes (shareable link). */
+  function syncShuffleToUrl() {
+    const url = new URL(window.location.href);
+    if (state.shuffled) {
+      url.searchParams.set('shuffle', '1');
+    } else {
+      url.searchParams.delete('shuffle');
+    }
+    const next = url.pathname + url.search + url.hash;
+    if (next !== window.location.pathname + window.location.search + window.location.hash) {
+      history.replaceState(null, '', next);
+    }
+  }
+
+  function applyShuffleFromUrl() {
+    const raw = new URLSearchParams(window.location.search).get('shuffle');
+    if (raw === null || raw === '0' || raw === 'false') {
+      state.shuffled = false;
+      return;
+    }
+    state.shuffled = true;
+  }
+
   function groupByArtist(list) {
     const groups = new Map();
     for (const r of list) {
@@ -345,6 +373,8 @@
     searchTimer = setTimeout(() => {
       state.query = searchEl.value.trim();
       state.shuffled = false; // typing exits shuffle view
+      updateShuffleUi();
+      syncShuffleToUrl();
       render();
     }, 80);
   });
@@ -353,9 +383,15 @@
     // re-randomize and toggle
     records.forEach(r => { r._shuffleKey = Math.random(); });
     state.shuffled = !state.shuffled;
-    shuffleBtn.classList.toggle('active', state.shuffled);
-    shuffleBtn.querySelector('span').textContent = state.shuffled ? 'restack' : 'shuffle';
+    updateShuffleUi();
+    syncShuffleToUrl();
     window.scrollTo({ top: stacksEl.offsetTop - 80, behavior: 'smooth' });
+    render();
+  });
+
+  window.addEventListener('popstate', () => {
+    applyShuffleFromUrl();
+    updateShuffleUi();
     render();
   });
 
@@ -413,6 +449,8 @@
       stacksEl.innerHTML = `<div class="empty"><div>no records found — is <code>data.js</code> loaded?</div></div>`;
       return;
     }
+    applyShuffleFromUrl();
+    updateShuffleUi();
     render();
     typeLine();
     buildTicker();

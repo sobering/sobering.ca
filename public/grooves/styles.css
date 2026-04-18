@@ -409,6 +409,8 @@ img { max-width: 100%; display: block; }
   animation-play-state: paused;
   will-change: transform;
   transform: translateZ(0);
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
 }
 .card:hover .disc svg,
 .card:focus-visible .disc svg {
@@ -544,8 +546,6 @@ img { max-width: 100%; display: block; }
     0 0 60px rgba(255, 107, 26, 0.2);
   border-radius: 6px;
   animation: popIn 0.24s ease-out both;
-  /* isolate all internal layout/paint work — kills any reflow bleed */
-  contain: layout paint;
   transform: translateZ(0);
   will-change: transform;
 }
@@ -590,8 +590,6 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 12px 30px rgba(0,0,0,0.7);
   cursor: pointer;
   flex-shrink: 0;
-  /* isolate the spinning disc so its rotation can't affect siblings */
-  contain: layout paint;
 }
 .modal-cover img {
   width: 100%;
@@ -621,7 +619,10 @@ img { max-width: 100%; display: block; }
 .modal-cover:focus-within .disc {
   transform: translateX(32%) rotate(14deg);
 }
-.modal-cover .disc svg { animation-play-state: running; }
+.modal-cover:hover .disc svg,
+.modal-cover:focus-within .disc svg {
+  animation-play-state: running;
+}
 
 .modal-info {
   min-width: 0;
